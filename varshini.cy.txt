@@ -1,0 +1,10 @@
+items = input("Enter Items seperate by comma").split(",")
+weights = list(map(int,input("Enter weights seperated by comma").split(",")))
+profits =list(map(int, input("Enter Profits respectively seperated by comma").split(",")))
+maxwt = int(input("maximum weight"))
+o=[]
+for i in weights:
+    if int(maxwt/i) == maxwt:
+        o.append(items[weights.index(i)])
+        o.append(profits[weights.index(i)]*maxwt)
+print("He can buy "+o[0]+" that fetch him a profit of Rs."+str(o[1]))
